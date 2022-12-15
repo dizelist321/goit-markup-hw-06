@@ -12,6 +12,10 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -307,7 +311,8 @@
                 </li>
                 <li class="footer-link link">
                         <h3 class="title-find-us title">
-                        Find us on
+                        Find us on 
+                        <span class="title-subscribe">Subscribe to the newsletter</span> 
                         </h3>
                     <ul class="find-us-list list">
                         <li class="find-us-items"><a href="#" class="find-us-link link">
@@ -334,18 +339,88 @@
                             </svg>
                             </a>
                         </li>
+                        <li class="subscribe-items">
+                            <section class="subscribe">
+                                <form action="" class="subscribe-form">
+                                <input type="email" class="subscribe-input" name="name" placeholder="E-mail">
+                                <button type="button" class="subscribe-btn" data-modal-open>Subscribe
+                                    <svg class="icon-subscribe" width="24" height="24">
+                                    <use href="./img/icons.svg.svg#icon-subscribe"></use>
+                                    </svg>
+                                </button>
+                                </form>
+                            </section>
+                        </li>
                     </ul>
                 </li>
-            </ul>    
+            </ul> 
+
         </div>
+
+
     </footer>
+
+    /* ----------MODAL---------- */
+
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="button-close" data-modal-close>
-                <svg width="30" height="30" class="button-mod-icon">
+            <button type="btn" class="btn-close" data-modal-close>
+                <svg width="18" height="18" class="btn-close-icon">
                     <use class="" href="./img/icons.svg.svg#icon-blackcross"></use>
-                </svg>
+                    </svg>
             </button>
+            <p class="modal-title">
+                Leave your information and we'll call you back
+            </p>
+        <form action="">
+            <div class="modal-input-group">
+                <label for="name">Name</label>
+            <div class="modal-input-wrapper">
+                <input type="text" class="modal-input" name="name" id="name" required>
+                <svg class="modal-input-icon" width="18" height="18">
+                    <use href="./img/icons.svg.svg#icon-modal1"></use>
+                </svg>
+            </div>
+            </div>
+
+            <div class="modal-input-group">
+                <label for="name">Telephone</label>
+            <div class="modal-input-wrapper">
+                <input type="tel" class="modal-input" name="name" id="name" required>
+                <svg class="modal-input-icon" width="18" height="18">
+                    <use href="./img/icons.svg.svg#icon-modal2"></use>
+                </svg>
+            </div>
+            </div>
+            
+            <div class="modal-input-group">
+                <label for="name">E-mail</label>
+            <div class="modal-input-wrapper">
+                <input type="email" class="modal-input" name="name" id="name" required>
+                <svg class="modal-input-icon" width="18" height="18">
+                    <use href="./img/icons.svg.svg#icon-modal3"></use>
+                </svg>
+            </div>
+            </div>
+
+            <div class="modal-input-group">
+                <label for="comment">Comments</label>
+                <textarea name="comment" id="comment" class="modal-comment-text" placeholder="Enter the text">Enter the text</textarea>
+            
+            </div>
+               
+            <div class="modal-politic-group">
+                <input type="checkbox" name="politic" id="politic" class="modal-politic-check visually-hidden">
+            
+                <label for="politic" class="modal-politic-label">
+                    I agree with the letter and accept the 
+                    <a href="" class="modal-politic-label-blue">Terms and Conditions</a>
+                </label>
+            
+            </div>
+               
+                <button type="submit" class="button-send">Send</button>
+        </form>
         </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
